@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrderForm</title>
+    <link rel="stylesheet" href="orderform.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form id="form" method="post">
+      <section class="h-100 h-custom gradient-custom-2">
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12">
+              <div
+                class="card card-registration card-registration-2"
+                style="border-radius: 15px"
+              >
+                <div class="card-body p-0">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <div class="p-5">
+                        <h3 class="fw-normal mb-5" style="color: #4835d4">
+                          Clothes Infomation
+                        </h3>
+
+                        <p>Add Y what do you want...</p>
+                        <div class="row">
+                          <div>
+                            <label>Frock</label>
+                            <input
+                              type="text"
+                              id="frock"
+                              name="frock"
+                              style="width: 30px"
+                            />
+                          </div>
+
+                          <div>
+                            <br />
+                            <label>Shirt</label>
+                            <input
+                              type="text"
+                              id="shirt"
+                              name="shirt"
+                              style="width: 30px"
+                            />
+                          </div>
+
+                          <div>
+                            <br />
+                            <label>Saree Blause</label>
+                            <input
+                              type="text"
+                              id="saree"
+                              name="saree"
+                              style="width: 30px"
+                            />
+                          </div>
+
+                          <div>
+                            <br />
+                            <label>Jeans</label>
+                            <input
+                              type="text"
+                              id="jeans"
+                              name="jeans"
+                              style="width: 30px"
+                            />
+                          </div>
+                        </div>
+                        <br />
+                        <a href="size.html"
+                        ><h5>
+                          If you want any details about <br>size You can visit
+                          this page
+                        </h5></a
+                      >
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                id="size"
+                                name="size"
+                                class="form-control form-control-lg" required
+                              />
+                              <label class="form-label">sizes</label>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                id="pattern"
+                                name="pattern"
+                                class="form-control form-control-lg"
+                                placeholder="height,shoulder,bust,west,arm,neck back,neck front"
+                              />
+                              <label class="form-label" for="form3Examplev3"
+                                >Pattern/Model</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline">
+                            <label class="form-label" for="customFile"
+                              >Default file input example</label
+                            >
+                            <input
+                              type="file"
+                              class="form-control"
+                              id="customFile"
+                              name="customFile"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                id="color"
+                                name="color"
+                                class="form-control form-control-lg" required
+                              />
+                              <label class="form-label" for="form3Examplev5" 
+                                >Color</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                id="details"
+                                name="details"
+                                class="form-control form-control-lg"
+                              />
+                              <label class="form-label" for="form3Examplev5"
+                                >Any other Informations</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <br /><br /><br />
+
+                      
+                      </div>
+                    </div>
+                    <div class="col-lg-6 bg-indigo text-white">
+                      <div class="p-5">
+                        <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <input
+                              type="text"
+                              id="fullName"
+                              name="fullName"
+                              class="form-control form-control-lg" required
+                            />
+                            <label class="form-label" for="form3Examplea2"
+                              >Full Name</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <input
+                              type="text"
+                              id="Dd"
+                              name="Dd"
+                              class="form-control form-control-lg" required
+                            />
+                            <label class="form-label" for="form3Examplea3"
+                              >Delivery Date</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-5 mb-4 pb-2">
+                            <div class="form-outline form-white">
+                              <input
+                                type="text"
+                                id="adds1"
+                                name="adds1"
+                                class="form-control form-control-lg" required
+                              />
+                              <label class="form-label" for="form3Examplea4"
+                                >Address 1</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-md-7 mb-4 pb-2">
+                            <div class="form-outline form-white">
+                              <input
+                                type="text"
+                                id="adds2"
+                                name="adds2"
+                                class="form-control form-control-lg"
+                              />
+                              <label class="form-label" for="form3Examplea5"
+                                >Address 2</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <input
+                              type="text"
+                              id="city"
+                              name="city"
+                              class="form-control form-control-lg" required
+                            />
+                            <label class="form-label" for="form3Examplea6"
+                              >City</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-5 mb-4 pb-2">
+                            <div class="form-outline form-white">
+                              <input
+                                type="text"
+                                id="phno1"
+                                name="phno1"
+                                class="form-control form-control-lg" required
+                              />
+                              <label class="form-label" for="form3Examplea7"
+                                >Phone Number 1</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-md-7 mb-4 pb-2">
+                            <div class="form-outline form-white">
+                              <input
+                                type="text"
+                                id="phno2"
+                                name="phno2"
+                                class="form-control form-control-lg"
+                              />
+                              <label class="form-label" for="form3Examplea8"
+                                >Phone Number 2</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mb-4">
+                          <div class="form-outline form-white">
+                            <input
+                              type="text"
+                              id="mail"
+                              name="mail"
+                              class="form-control form-control-lg" required
+                            />
+                            <label class="form-label" for="form3Examplea9"
+                              >Your Email</label
+                            >
+                          </div>
+                        </div>
+
+                        <div
+                          class="form-check d-flex justify-content-start mb-4 pb-3"
+                        >
+                          <input
+                            class="form-check-input me-3"
+                            type="checkbox"
+                            value=""
+                            id="form2Example3c"
+                          />
+                          <label
+                            class="form-check-label text-white"
+                            for="form2Example3"
+                          >
+                            I do accept the
+                            <a href="#!" class="text-white"
+                              ><u>Terms and Conditions</u></a
+                            >
+                            of your site.
+                          </label>
+                        </div>
+
+                      <button
+                          type="submit"
+                          value="submit" class="btn btn-light btn-lg"><a href="thanksPage _2.html">Register</a></button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <script src="orderform.js"></script>
+  </body>
+</html>
+

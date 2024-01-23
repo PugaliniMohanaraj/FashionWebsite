@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+<link rel="stylesheet" href="formOrder.css">
+ 
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    
+    <style>
+      *{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  
+  }
+  body{
+    background-color: #eee;
+  }
+  .detail{
+   position: absolute;
+   right: 350px;
+   
+  }
+  .cart {
+  width: 60%;
+
+  
+}
+button {
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  padding: 5px 5px 5px 5px;
+
+}
+.item-flex {
+  display: flex;
+  flex-grow: 1;
+}
+.product-qty {
+  display:     flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.product-qty button {
+background-color: #eee;
+  width:  20px;
+  height: 20px;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  color: #000;
+
+}
+
+.product-qty button:active,
+.product-close-btn:active ion-icon { transform: scale(0.95); }
+
+.product-qty button ion-icon {
+  --ionicon-stroke-width: 60px;
+  font-size: 10px;
+}
+
+.product-close-btn {
+  position: absolute;
+  top:   50px;
+  right: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .04);
+
+}
+
+  @media only screen and (max-width: 789px) {
+  .res-width{
+      width:95%;
+  }
+
+  }
+  </style>
+</head>
+
+<body>
+
+  
+
+  <!--
+    - main container
+  -->
+
+  <main class="container">
+   <div class="cartinto ">
+        <h1 class="my-2">Your Cart </h1>
+        <hr>
+    </div>
+    
+    
+    <div class="item-flex">
+
+
+      <!--
+        - cart section
+      -->
+      <section class="cart js-added-items">
+
+        <div class="cart-item-box" style="margin-right: 15px;">
+
+         
+
+          <div id="js-added-items-wr"></div>
+
+          
+
+        </div>
+
+      
+      </section>
+  
+      <!--
+       - checkout section
+      -->
+     
+
+        <div class="col-md-5">
+          <div class="finalBill">
+              <div class="card">
+                  <div class="card-header text-muted"><h5>PRICE DETAILS</h5></div>
+                  <div class="card-body">
+                      <div class="itemList p-2">
+                          <ul  style="list-style: none; padding-left:0;">
+                            
+                              <li class="py-2 d-flex justify-content-between">   <span>Subtotal</span> <span>Rs <span id="subtotal"></span></span></li>
+                              <li class="py-2 d-flex justify-content-between"> <span>Shipping</span> <span>Rs <span id="shipping"></span>100.00</span> </li>
+                              <li class="py-2 d-flex justify-content-between"><h6>Delivery</h6> <h6 style="color: rgb(5, 5, 205)">FREE</h6></li>
+                              <hr>
+                              <li class="d-flex justify-content-between"><h5>Total Price</h5><span id="total"></span></li>
+                          </ul>
+                      </div>                
+                  </div>
+                  <div class="card-footer  text-center" style="color: rgb(5, 5, 205);" >You Saved your money on this order</div>
+              </div>
+          </div>
+  
+          <div class="finalBillButton d-grid gap-2 py-3">
+              <button type="button" class="btn btn-success btn-lg" id="button" style="background-color: rgb(13, 13, 222);" >PLACE ORDER</button>        
+          </div>
+  
+  
+              </div>
+          </div>
+          </div>
+      </div>
+     
+   
+
+    </div>
+
+  </main>
+  <div class="brw">
+  
+   
+   <div class="container1">
+      
+      <header>order Form</header>
+      <div class="bar" >
+        <div class="step">
+          <p>Contact</p>
+          <div class="bullet">
+            <span class="num">1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Place</p>
+          <div class="bullet">
+            <span class="num">2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form action="#" id="form" method="post">
+          <div class="page slide-page">
+            <div class="title">Contact Info:</div>
+  
+            <div class="field">
+              <div class="label">Email Address</div>
+              <input type="text" id="email_1" name="email_1" required>
+            </div>
+            <div class="field">
+              <div class="label">Phone Number</div>
+              <input type="text" id="phone_1" name="phone_1" required>
+            </div>
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Address Info:</div>
+            <div class="field">
+              <div class="label">City</div>
+              <input type="text" id="city_1" name="city_1" required>
+            </div>
+            <div class="field">
+              <div class="label">State Address</div>
+              <input type="text" id="address_1" name="address_1" required>
+            </div>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="submit" type="submit" value="submit"><a href="thanksPage.html" style="text-decoration: none; color: #fff;">Order</a></button>
+            </div>
+          </div>
+             
+          
+
+
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("button").addEventListener("click",function(){
+    document.querySelector(".brw").style.display = "flex";
+  })
+  document.getElementById("close").addEventListener("click",function(){
+    document.querySelector(".brw").style.display = "none";
+  })
+</script>
+
+  <!--
+    - custom js link
+  -->
+  <!-- <script src="./script.js"></script> -->
+  <script src="checkout.js"></script>
+<script src="formOrder.js"></script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
